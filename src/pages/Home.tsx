@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { IoPersonCircleSharp } from "react-icons/io5";
@@ -14,8 +14,6 @@ type Product = {
 
 export function Home() {
   const [products, setProducts] = useState([]);
-  const [name, setName] = useState<string>('');
-  const [pass, setPass] = useState<string>('');
   const [qtdaVendas, setQtdaVendas] = useState<string>('');
   let nav = useNavigate();
 
@@ -39,7 +37,7 @@ export function Home() {
     };
 
     fetchData();
-
+    revirify();
   }, []);
 
   async function revirify(){
