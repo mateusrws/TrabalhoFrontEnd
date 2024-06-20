@@ -3,6 +3,15 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { IoPersonCircleSharp } from "react-icons/io5";
 
+type Product = {
+  pro_cod:any;
+  pro_nome:any;
+  pro_descri:any;
+  pro_preco:any;
+  pro_qtda:any;
+  pro_fabricante:any;
+}
+
 export function Home() {
   const [products, setProducts] = useState([]);
   const [name, setName] = useState<string>('');
@@ -75,7 +84,7 @@ export function Home() {
             </tr>
           </thead>
           <tbody>
-            {products.map(product => (
+            {products.map( (product:Product) => (
               <tr key={product.pro_cod}>
                 <td className="border px-4 py-2">{product.pro_cod}</td>
                 <td className="border px-4 py-2">{product.pro_nome}</td>
