@@ -29,12 +29,14 @@ export function Cadastrar(){
             alert('Preencha todos os campos');
         }else{
             try {
-                const cadastrar = await axios.post('http://localhost:3344/cliente', {
+                const cadastrar = await axios.post('https://trabalhobackend.onrender.com/cliente', {
                   cli_password: senha.toLowerCase(),
                   cli_nome: nome.toLocaleLowerCase(),
                   cli_email: email,
                   cli_tel: tel
                 });
+                console.log(cadastrar);
+                
                 localStorage.setItem('cli_nome', nome);
                 console.log('Usuário cadastrado com sucesso!');
                 nav('/Home');
