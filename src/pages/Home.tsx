@@ -23,8 +23,8 @@ export function Home() {
     const fetchData = async () => {
       try {
         let pass = localStorage.getItem('senha');
-        const response = await axios.get("http://localhost:3344/produto");
-        const resp = await axios.get(`http://localhost:3344/cliente/${pass}`);
+        const response = await axios.get("https://trabalhobackend.onrender.com/produto");
+        const resp = await axios.get(`https://trabalhobackend.onrender.com/cliente/${pass}`);
     
         if (resp.data[0] && resp.data[0].cli_qtdavendas !== undefined) {
           setQtdaVendas(resp.data[0].cli_qtdavendas);
