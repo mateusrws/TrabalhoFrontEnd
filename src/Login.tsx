@@ -1,6 +1,5 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import './App.css'
-import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
 import { Logar } from './components/Logar';
 import { Header } from './components/Header';
