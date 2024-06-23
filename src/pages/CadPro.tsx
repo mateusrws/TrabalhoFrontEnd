@@ -38,7 +38,7 @@ export function CadPro(){
             alert('Preencha todos os campos');
         }else{
             try {
-                await axios.post('http://localhost:3344/produto', {
+                await axios.post('https://trabalhobackend.onrender.com/produto', {
                     pro_nome: nome_produto,
                     pro_descri: descri,
                     pro_fabricante: fabricante,
