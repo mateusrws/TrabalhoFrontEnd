@@ -25,7 +25,7 @@ export function Comprar() {
     const pegarPreco = async () => {
         try {
             console.log(`Fetching price for product code: ${pro_cod}`);
-            const result = await axios.get(`http://localhost:3344/produto/${pro_cod}`);
+            const result = await axios.get(`https://trabalhofrontend.onrender.com/produto/${pro_cod}`);
             if (result.data) {
                 let preco = Number(result.data.pro_preco);
                 setVen_valor(ven_qtda * preco);
@@ -38,7 +38,7 @@ export function Comprar() {
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:3344/vendas', {
+            await axios.post('https://trabalhofrontend.onrender.com/vendas', {
                 pro_cod,
                 cli_cod,
                 ven_qtda,
